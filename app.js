@@ -17,7 +17,9 @@ var campgroundRoutes = require("./routes/campgrounds");
 var indexRoutes = require("./routes/index");
 
 // seedDB();
-mongoose.connect("mongodb+srv://azaddhruv:aryanna@cluster0-jvgma.mongodb.net/Yelp-2?retryWrites=true");
+mongoose.connect(process.env.DATABASEURL);
+// mongoose.connect("mongodb+srv://azaddhruv:aryanna@cluster0-jvgma.mongodb.net/Yelp-2?retryWrites=true");
+
 
 app.use(bodyParser.urlencoded({extended : true}));
 app.set("view engine", "ejs");
