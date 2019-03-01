@@ -1,6 +1,7 @@
 var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
+var mongoose = require("mongoose");
 var passport = require("passport");
 var flash = require("connect-flash");
 var LocalStrategy = require("passport-local");
@@ -16,8 +17,7 @@ var campgroundRoutes = require("./routes/campgrounds");
 var indexRoutes = require("./routes/index");
 
 // seedDB();
-var mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://azaddhruv:<@Dhruv1991999>@cluster0-jvgma.mongodb.net/Yelp_Camp_Test_Deploying?retryWrites=true");
+mongoose.connect("mongodb+srv://azaddhruv:aryanna@cluster0-jvgma.mongodb.net/Yelp-2?retryWrites=true");
 
 app.use(bodyParser.urlencoded({extended : true}));
 app.set("view engine", "ejs");
